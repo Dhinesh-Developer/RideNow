@@ -84,68 +84,6 @@ The system implements intelligent driver matching using Strategy Pattern, dynami
 
 ---
 
-## 📊 UML Class Diagram
-
-```mermaid
-classDiagram
-    class User {
-        <<abstract>>
-        -String userId
-        -String name
-        -String email
-        +getUserId() String
-        +addRating(double)
-    }
-    
-    class Rider {
-        -List~Trip~ tripHistory
-        +addTripToHistory(Trip)
-    }
-    
-    class Driver {
-        -Vehicle vehicle
-        -DriverStatus status
-        -boolean isVerified
-        +isAvailable() boolean
-    }
-    
-    User <|-- Rider
-    User <|-- Driver
-    
-    class Trip {
-        -String tripId
-        -Rider rider
-        -Driver driver
-        -TripStatus status
-        -double totalFare
-        +completeTrip()
-        +cancelTrip()
-    }
-    
-    Rider "1" -- "*" Trip
-    Driver "1" -- "*" Trip
-    
-    class RideService {
-        -TripRepository tripRepo
-        -DriverRepository driverRepo
-        +requestRide() Trip
-        +completeRide()
-        +cancelRide()
-    }
-    
-    class DriverMatchingStrategy {
-        <<interface>>
-        +selectDriver(List~Driver~, Location) Driver
-    }
-    
-    class NearestDriverStrategy {
-        +selectDriver(List~Driver~, Location) Driver
-    }
-    
-    RideService --> DriverMatchingStrategy
-    DriverMatchingStrategy <|.. NearestDriverStrategy
----
-
 ---
 ### Application Flow
 Complete Ride Lifecycle
@@ -189,26 +127,19 @@ Strategy	DriverMatchingStrategy, PricingStrategy	Algorithm selection at runtime
 Observer	TripObserver, TripObservable	Real-time notifications
 Factory	RideFactory	Complex object creation
 Repository	UserRepository, DriverRepository	Data access abstraction
-3. Collections Framework
+
+4. Collections Framework
 ConcurrentHashMap: Thread-safe data storage
-
 ArrayList: Dynamic lists for trip history
-
 HashSet: Unique collections
-
 HashMap: Efficient lookups
-
 Stream API: Functional operations
 
 4. SOLID Principles
 Single Responsibility: Each class has one purpose
-
 Open/Closed: Open for extension, closed for modification
-
 Liskov Substitution: Subtypes replaceable for base types
-
 Interface Segregation: Small, focused interfaces
-
 Dependency Inversion: Depend on abstractions, not concretions
 
 📁 Project Structure
@@ -292,15 +223,10 @@ Real-world Implementation - Implements actual Uber features
 
 ❌ Current Limitations
 In-Memory Storage - Data lost on restart
-
 No Database - Needs persistence layer
-
 Single Server - No load balancing
-
 Basic Security - No authentication/authorization
-
 Mock GPS - No real map integration
-
 Synchronous Operations - No async processing
 
 ⚡ Challenges Faced
@@ -343,55 +269,25 @@ Scheduled Rides - Book in advance
 Multiple Stops - Add intermediate stops
 Ride Sharing - Share rides with others
 Driver Incentives - Bonuses and rewards
-
 Heat Maps - For surge pricing visualization
 
 📈 Performance Metrics
 Business Metrics
 Ride Completion Rate: Target > 95%
-
 Average Ride Time: < 30 minutes
-
 Driver Utilization: > 70% active time
-
 Customer Satisfaction: > 4.5/5 rating
 
 Technical Metrics
 API Response Time: < 200ms for 95% requests
-
 System Uptime: 99.9% availability
-
 Error Rate: < 0.1% failed requests
-
 Concurrent Users: Support 10K+ concurrent
 
 Load Testing Results
 Ride Requests/sec: 1000+
-
 Driver Matching Time: < 2 seconds
-
 Payment Processing: < 1 second
-
 Database Queries: < 50ms average
 
-🤝 Contributing
-Contributions are welcome! Here's how you can help:
 
-Fork the repository
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-Development Guidelines
-Follow Java coding conventions
-
-Write unit tests for new features
-
-Update documentation
-
-Use meaningful commit messages
