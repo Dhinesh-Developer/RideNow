@@ -12,23 +12,23 @@ A comprehensive, production-ready ride-hailing platform built with **Java**, imp
 
 ## 📋 Table of Contents
 
-- [Overview](#-overview)
-- [✨ Features](#-features)
-- [🏗️ System Architecture](#️-system-architecture)
-- [📊 UML Class Diagram](#-uml-class-diagram)
-- [🔄 Application Flow](#-application-flow)
-- [🎯 Concepts Used](#-concepts-used)
-- [📁 Project Structure](#-project-structure)
-- [🚀 Quick Start](#-quick-start)
-- [💻 Usage Examples](#-usage-examples)
-- [🎨 Design Patterns](#-design-patterns)
-- [⚡ System Design Concepts](#-system-design-concepts)
-- [✅ Pros and Cons](#-pros-and-cons)
-- [⚡ Challenges Faced](#-challenges-faced)
-- [🔮 Future Enhancements](#-future-enhancements)
-- [📈 Performance Metrics](#-performance-metrics)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+- [Overview]()
+- [✨ Features]()
+- [🏗️ System Architecture]()
+- [📊 UML Class Diagram]
+- [🔄 Application Flow]
+- [🎯 Concepts Used]
+- [📁 Project Structure]
+- [🚀 Quick Start]
+- [💻 Usage Examples]
+- [🎨 Design Patterns]
+- [⚡ System Design Concepts]
+- [✅ Pros and Cons]
+- [⚡ Challenges Faced]
+- [🔮 Future Enhancements]
+- [📈 Performance Metrics]
+- [🤝 Contributing]
+- [📄 License]
 
 ---
 
@@ -147,7 +147,7 @@ classDiagram
 ---
 
 ---
-🔄 Application Flow
+### Application Flow
 Complete Ride Lifecycle
 
 1. REGISTRATION
@@ -277,20 +277,15 @@ RideNow/
 
 
 ----
-✅ Pros and Cons
+### **Props and cons**
+
 ✅ Advantages
 Modular Design - Easy to maintain and extend
-
 Production Ready - Includes error handling, logging, thread safety
-
 Scalable Architecture - Can handle increasing load
-
 Design Patterns - Proven solutions to common problems
-
 Clean Code - Follows SOLID principles
-
 Testable - Easy to write unit tests
-
 Extensible - Easy to add new features
 
 Real-world Implementation - Implements actual Uber features
@@ -319,50 +314,34 @@ Notification System	Observer pattern for decoupling
 Performance	Spatial indexing, efficient algorithms
 Design Challenges
 Extensibility - Supported via Strategy and Factory patterns
-
 Maintainability - Achieved through SOLID principles
-
 Testing - Made easy with dependency injection
-
 Performance - Optimized with efficient data structures
 
 🔮 Future Enhancements
 Phase 1 (Short-term)
 Database integration (PostgreSQL)
-
 REST API with Spring Boot
-
 Basic authentication (JWT)
-
 Real payment simulation
 
 Phase 2 (Medium-term)
 Microservices architecture
-
 Docker containerization
-
 CI/CD pipeline
-
 Monitoring and logging (Prometheus, Grafana)
 
 Phase 3 (Long-term)
 Machine learning for dynamic pricing
-
 Real-time traffic integration
-
 Advanced analytics dashboard
-
 Mobile applications (Android/iOS)
 
 Feature Roadmap
 Split Fare - For Uber Pool rides
-
 Scheduled Rides - Book in advance
-
 Multiple Stops - Add intermediate stops
-
 Ride Sharing - Share rides with others
-
 Driver Incentives - Bonuses and rewards
 
 Heat Maps - For surge pricing visualization
