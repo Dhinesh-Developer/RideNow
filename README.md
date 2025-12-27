@@ -1,4 +1,4 @@
-# 🚗 RideNow - Uber Clone System
+# 🚗 RideNow System
 
 ![Java](https://img.shields.io/badge/Java-17-blue.svg)
 ![OOP](https://img.shields.io/badge/OOP-Design-orange.svg)
@@ -80,6 +80,8 @@ The system implements intelligent driver matching using Strategy Pattern, dynami
 - ✅ Tamil Nadu locations (Customizable)
 
 ---
+### UML diagram
+![WhatsApp Image 2025-12-27 at 4 34 40 PM](https://github.com/user-attachments/assets/93dacfb4-3475-4373-9d8a-30026b086f21)
 
 
 ---
@@ -108,7 +110,6 @@ Complete Ride Lifecycle
 
 
 ---
-![WhatsApp Image 2025-12-27 at 4 18 30 PM](https://github.com/user-attachments/assets/f0cee94e-7576-4912-942c-e7c8f7f366de)
 
 🎯 Concepts Used
 1. Object-Oriented Programming (OOP)
